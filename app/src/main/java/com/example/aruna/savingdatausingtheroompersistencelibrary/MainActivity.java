@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Need to do call crud operation in AsyncTask - other wise will throw exception
+
         createRoomObject();
     }
 
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         RetreveTask retreveTask = new RetreveTask();
         retreveTask.execute();
+
+        /*UpdateTask updateTask = new UpdateTask();
+        updateTask.execute(user);*/
 
         /*DeleteTask deleteTask = new DeleteTask();
         deleteTask.execute(user);*/
